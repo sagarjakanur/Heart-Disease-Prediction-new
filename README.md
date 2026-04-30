@@ -1,98 +1,113 @@
-## Heart-Disease-Prediction 
+## Heart Disease Prediction System
 
 ### Overview
 
-A simple web application which uses Machine Learning algorithm to predict the heart condition of a person by providing some inputs about the person health like age, gender, blood pressure, cholesterol level etc built using `Flask` and deployed on `Heroku`.
+This project is a web-based application that predicts whether a person is at risk of heart disease using machine learning techniques. The system takes user inputs such as age, gender, blood pressure, cholesterol level, and other medical parameters, and provides a prediction result.
 
-### Motivation 
+The machine learning model is built using Scikit-learn and integrated into a Flask web application, allowing users to interact with the model through a simple and user-friendly interface.
 
-As being a Data and ML enthusiast I have tried many different projects related to the subject but what I have realised is that Deploying your machine learning model is a key aspect of every ML and Data science project. Everything thing I had studied or been taught so far in my Data science and ML journey had mostly focused on defining problem statement followed by Data collection and preparation, model building and evaluation process which is of course important for every ML/DS project but what if I want different people to interact with my models, how can I make my model available for end-users? I can't send them jupyter notebooks right!. That's why I wanted to try my hands on complete end-to-end machine learning project. 
+---
 
-- To View the Deployed Application, click on the link given below : 
-  **Heart Disease Predictor Web App -** *[https://heart-disease-predictor-flask.herokuapp.com/](https://heart-disease-predictor-flask.herokuapp.com/)*
+### Motivation
 
-- To get the Code for Exploratory data analysis/visualisations, different algorithms used and the model evaluation, click on the link mentioned below :
-  **Link of jupyter notebook -** *[https://github.com/asthasharma98/Data-Science/blob/main/Heart%20Disease%20Prediction/heart_disease_prediction.ipynb](https://github.com/asthasharma98/Data-Science/blob/main/Heart%20Disease%20Prediction/heart_disease_prediction.ipynb)*
-  
-**A Demo of the Web App :**
+During my learning in Machine Learning and Data Science, I understood that building a model is only one part of the process. Making the model accessible to users is equally important.
 
-![Heart_disease](https://github.com/asthasharma98/Heart-Disease-Prediction-Deployment/blob/master/Readme_resources/heart_disease.gif)
- 
- 
- ### Technical Aspect
- 
- This Project is mainly divided into two parts:
- 
- 1. Exploring the dataset and traning the model using `Sklearn`.
- 2. Building and hosting a `flask` web app on `Heroku`.
+This project focuses on building a complete end-to-end system, including:
 
-**About the repository Structure :**
+* Data processing
+* Model training
+* Web application development
+* User interaction
 
-- Project consist `app.py` script which is used to run the application and is engine of this app. contians API that gets input from the user and computes a predicted value based on the model.
-- `prediction.py` contains code to build and train a Machine learning model.
-- *templates* folder contains two files `main.html` and `result.html` which describe the structure of the app and the way this web application behaves. These files are connected with Python via Flask framework.  
-- *static* folder contains file `style.css` which adds some styling and enhance the look of the application. 
+This helps in understanding how machine learning solutions are deployed in real-world applications.
+
+---
+
+### Technical Aspects
+
+This project is divided into two main parts:
+
+1. **Model Development**
+
+   * Data preprocessing and cleaning
+   * Feature selection
+   * Training the model using Scikit-learn
+   * Evaluating model performance
+
+2. **Web Application**
+
+   * Built using Flask
+   * Takes user input through a web form
+   * Sends input data to the trained model
+   * Displays prediction results
+
+---
+
+### Project Structure
+
+* `app.py` → Main Flask application that runs the web server
+* `model.pkl` / `.sav` → Trained machine learning model
+* `templates/` → HTML files for user interface
+* `static/` → CSS files for styling
+* `requirements.txt` → List of required Python libraries
+
+---
 
 ### Installation
 
-The Code is written in Python 3.8. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. To install the required packages and libraries, run this command in the project directory after cloning the repository:
+Make sure Python is installed (Python 3.8 or above recommended).
 
-```
-pip install -r requirements.txt 
-```
+Install the required libraries:
 
-*To clone the repository*
-
-```
-git clone https://github.com/asthasharma98/Heart-Disease-Prediction-Deployment.git
+```bash
+pip install -r requirements.txt
 ```
 
-### Run 
+---
 
-*To Run the Application*
+### How to Run
 
+Clone the repository:
+
+```bash
+git clone https://github.com/sagarjakanur/Heart-Disease-Prediction-new.git
+cd Heart-Disease-Prediction-new
 ```
+
+Run the application:
+
+```bash
 python app.py
 ```
 
-### Deployement on Heroku
+Open your browser and go to:
 
-Install Heroku CLI as this makes it easy to create and manage your Heroku apps directly from the terminal. 
-You can download it from [here](https://devcenter.heroku.com/articles/heroku-cli).
+```
+http://127.0.0.1:5000
+```
 
-next step would be to follow the instruction given on [Heroku Documentation](https://devcenter.heroku.com/articles/getting-started-with-python) to deploy a web app.
+---
 
-### Technologies used 
+### Technologies Used
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  
+* Python
+* Flask
+* Scikit-learn
+* HTML
+* CSS
 
-[![Heroku](https://github.com/jalbertsr/logo-badge-images/blob/master/img/rsz_heroku.png?raw=true)](https://www.heroku.com/)
+---
 
-[![Flask](https://github.com/jalbertsr/logo-badge-images/blob/master/img/rsz_flask.png?raw=true)](http://flask.pocoo.org/)  
+### Future Improvements
 
+* Improve model accuracy using advanced algorithms
+* Add better user interface design
+* Include graphical representation of results
+* Deploy the application on cloud platforms
 
-### Future work 
+---
 
-- improve model performance.
-- Add more better styling to the user interface.
+### Credits
 
-### credit 
-
-- A big thanks to [Anuj vyas](https://github.com/anujvyas/Diabetes-Prediction-Deployment) as I got the desinging idea of web app from his projects on github.
-
-**Some Useful Resources**
-
-- **Flask Quickstart Documentation** : [https://flask.palletsprojects.com/en/1.1.x/quickstart/](https://flask.palletsprojects.com/en/1.1.x/quickstart/)
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
+This project is developed for learning and academic purposes.
+Some design and structural ideas are inspired by open-source machine learning deployment projects, and have been modified and customized.
